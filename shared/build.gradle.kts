@@ -1,48 +1,70 @@
-plugins {
-    kotlin("multiplatform")
-    id("com.android.library")
-}
+setupKotlinMultiplatform(
+    buildTargets = listOf(
+        BuildTarget.Ios, BuildTarget.Android(namespace = "pokedex.shared")
+    ),
+    additionalPlugins = listOf(
+        deps.plugins.parcelize,
+        deps.plugins.serialization,
+        deps.plugins.sqldelight,
+    )
+)
 
-@OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
-
-    android {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "1.8"
-            }
-        }
-    }
-    
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "shared"
-        }
-    }
-
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                //put your multiplatform dependencies here
-            }
+        commonMain.dependencies {
+            implementations(
+                deps.kotlinx.coroutinesCore,
+                deps.kotlinx.serializationJson,
+                deps.essenty.parcelable,
+                deps.macaron.core,
+                deps.macaron.statemachine,
+                deps.ktor.contentNegotiation,
+                deps.ktor.client.core,
+                deps.ktor.serialization,
+                deps.ktor.logging,
+                deps.sqldelight.runtime,
+                deps.settings.core,
+                deps.sqldelight.coroutineExtensions,
+                deps.sqldelight.primitiveAdapters,
+                deps.settings.serialization,
+            )
+            apis(
+                deps.logging.kermit,
+            )
         }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-            }
+        androidMain.dependencies {
+            implementations(
+                deps.ktor.client.android,
+                deps.sqldelight.androidDriver,
+            )
+        }
+        iosMain.dependencies {
+            implementations(
+                deps.ktor.client.ios,
+                deps.sqldelight.nativeDriver,
+            )
+        }
+        commonTest.dependencies {
+            implementations(
+                deps.test.kotlin,
+                deps.test.coroutinesTest,
+                deps.test.turbine,
+                deps.test.kotest,
+                deps.ktor.client.mock,
+                deps.settings.test,
+            )
+        }
+        androidTest.dependencies {
+            implementations(deps.sqldelight.sqliteDriver)
         }
     }
 }
 
-android {
-    namespace = "tech.fika.pokedex"
-    compileSdk = 33
-    defaultConfig {
-        minSdk = 24
+sqlDelight {
+    databases {
+        create("Database") {
+            packageName.set("tech.fika.pokedex.local.database")
+            dialect("app.cash.sqldelight:sqlite-3-30-dialect:2.0.0-alpha04")
+        }
     }
 }
