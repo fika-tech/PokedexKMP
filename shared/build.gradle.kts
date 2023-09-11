@@ -62,9 +62,8 @@ kotlin {
 
 sqlDelight {
     databases {
-        create("Database") {
+        create("PokemonDatabase") {
             packageName.set("tech.fika.pokedex.local.database")
-            dialect("app.cash.sqldelight:sqlite-3-30-dialect:2.0.0-alpha04")
         }
     }
 }
