@@ -1,0 +1,162 @@
+[versions]
+# Kotlin
+kotlin = "1.9.10"
+coroutines = "1.7.3"
+dateTime = "0.4.1"
+serializationJson = "1.5.1"
+# Android
+androidGradle = "7.4.2"
+coreKtx = "1.12.0"
+coreSplash = "1.0.1"
+appCompat = "1.6.1"
+lifecycle = "2.6.2"
+navigation = "2.7.2"
+activityCompose = "1.7.2"
+constraintLayoutCompose = "1.0.1"
+# Compose
+composeBom = "2023.09.00"
+composeMaterial3 = "1.2.0-alpha07"
+composeCompiler = "1.5.3"
+accompanist = "0.28.0"
+# Coil
+coil = "2.2.2"
+# DI
+hilt = "2.48"
+# Macaron
+macaron = "0.1.0"
+# Essenty
+essenty = "1.1.0"
+# Ktor
+ktor = "2.3.2"
+# SqlDelight
+sqldelight = "2.0.0"
+# Multiplatform Settings
+multiplatformSettings = "1.0.0"
+# Logging
+timber = "5.0.1"
+kermit = "2.0.0-RC5"
+# Testing
+androidxTest = "1.5.2"
+junit = "4.13.2"
+androidxJunit = "1.1.5"
+turbine = "1.0.0"
+kotest = "5.7.1"
+mockmp = "1.15.0"
+kover = "0.5.1"
+# Tooling
+ktLint = "11.5.1"
+dokka = "1.7.20"
+leakCanary = "2.9.1"
+desugarJdkLibs = "2.0.3"
+
+[libraries]
+# Gradle
+gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradle" }
+gradle-hilt = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hilt" }
+gradle-sqldelight = { group = "app.cash.sqldelight", name = "gradle-plugin", version.ref = "sqldelight" }
+gradle-serialization = { group = "org.jetbrains.kotlin", name = "kotlin-serialization", version.ref = "kotlin" }
+gradle-ktlint = { group = "org.jlleitschuh.gradle", name = "ktlint-gradle", version.ref = "ktLint" }
+gradle-kover = { group = "org.jetbrains.kotlinx", name = "kover", version.ref = "kover" }
+gradle-dokka = { group = "org.jetbrains.dokka", name = "dokka-gradle-plugin", version.ref = "dokka" }
+gradle-mockmp = { group = "org.kodein.mock", name = "mockmp-gradle-plugin", version.ref = "mockmp" }
+gradle-safeArgs = { group = "androidx.navigation", name = "navigation-safe-args-gradle-plugin", version.ref = "navigation" }
+# Kotlinx
+kotlinx-coroutinesCore = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutinesAndroid = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-dateTime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "dateTime" }
+kotlinx-serializationJson = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serializationJson" }
+# Androidx
+androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-coreSplash = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplash" }
+androidx-appCompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appCompat" }
+androidx-activityCompose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-viewModel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+androidx-savedState = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "lifecycle" }
+androidx-navigationFragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+androidx-navigationUi = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+androidx-constraintLayoutCompose = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref = "constraintLayoutCompose" }
+# Compose
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-uiGraphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+compose-uiTooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose-uiToolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+compose-foundationLayout = { group = "androidx.compose.foundation", name = "foundation-layout" }
+compose-material = { group = "androidx.compose.material", name = "material" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "composeMaterial3" }
+test-composeJunit = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+test-composeManifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+# Accompanist
+accompanist-swipeRefresh = { group = "com.google.accompanist", name = "accompanist-swiperefresh", version.ref = "accompanist" }
+accompanist-pager = { group = "com.google.accompanist", name = "accompanist-pager", version.ref = "accompanist" }
+accompanist-pagerIndicators = { group = "com.google.accompanist", name = "accompanist-pager-indicators", version.ref = "accompanist" }
+accompanist-web = { group = "com.google.accompanist", name = "accompanist-webview", version.ref = "accompanist" }
+accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist" }
+accompanist-webview = { group = "com.google.accompanist", name = "accompanist-webview", version.ref = "accompanist" }
+accompanist-flowlayout = { group = "com.google.accompanist", name = "accompanist-flowlayout", version.ref = "accompanist" }
+accompanist-system-ui-controller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "accompanist" }
+# Coil
+coil-core = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+coil-gif = { group = "io.coil-kt", name = "coil-gif", version.ref = "coil" }
+# Hilt
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+# Macaron
+macaron-core = { group = "tech.fika.macaron", name = "macaron-core", version.ref = "macaron" }
+macaron-statemachine = { group = "tech.fika.macaron", name = "macaron-statemachine", version.ref = "macaron" }
+macaron-logging = { group = "tech.fika.macaron", name = "macaron-logging", version.ref = "macaron" }
+macaron-messaging = { group = "tech.fika.macaron", name = "macaron-messaging", version.ref = "macaron" }
+macaron-statesaver = { group = "tech.fika.macaron", name = "macaron-statesaver", version.ref = "macaron" }
+# Essenty
+essenty-parcelable = { group = "com.arkivanov.essenty", name = "parcelable", version.ref = "essenty"}
+# Ktor
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-android = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-ios = { group = "io.ktor", name = "ktor-client-darwin", version.ref = "ktor" }
+ktor-client-mock = { group = "io.ktor", name = "ktor-client-mock", version.ref = "ktor" }
+ktor-serialization = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+ktor-contentNegotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+# Sqldelight
+sqldelight-runtime = { group = "app.cash.sqldelight", name = "runtime", version.ref = "sqldelight" }
+sqldelight-coroutineExtensions = { group = "app.cash.sqldelight", name = "coroutines-extensions", version.ref = "sqldelight" }
+sqldelight-androidDriver = { group = "app.cash.sqldelight", name = "android-driver", version.ref = "sqldelight" }
+sqldelight-nativeDriver = { group = "app.cash.sqldelight", name = "native-driver", version.ref = "sqldelight" }
+sqldelight-sqliteDriver = { group = "app.cash.sqldelight", name = "sqlite-driver", version.ref = "sqldelight" }
+sqldelight-primitiveAdapters = { group = "app.cash.sqldelight", name = "primitive-adapters", version.ref = "sqldelight" }
+# MultiplatformSettings
+settings-core = { group = "com.russhwolf", name = "multiplatform-settings", version.ref = "multiplatformSettings" }
+settings-serialization = { group = "com.russhwolf", name = "multiplatform-settings-serialization", version.ref = "multiplatformSettings" }
+settings-test = { group = "com.russhwolf", name = "multiplatform-settings-test", version.ref = "multiplatformSettings" }
+# Logging
+logging-kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
+logging-timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+# Test
+test-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
+test-turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+test-kotest = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
+test-coroutinesTest = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+test-androidxJunit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
+test-androidxTestRunner = { group = "androidx.test", name = "runner", version.ref = "androidxTest" }
+test-androidxTestRules = { group = "androidx.test", name = "rules", version.ref = "androidxTest" }
+# Tooling
+tooling-leakCanary = { group = "com.squareup.leakcanary", name = "leakcanary-android", version.ref = "leakCanary" }
+
+[plugins]
+kotlinMultiplatform = { id = "kotlin-multiplatform" }
+kotlinKapt = { id = "kotlin-kapt" }
+kotlinAndroid = { id = "kotlin-android"}
+androidApp = { id = "com.android.application" }
+androidLibrary = { id = "com.android.library" }
+hilt = { id = "com.google.dagger.hilt.android" }
+parcelize = { id = "kotlin-parcelize" }
+serialization = { id = "kotlinx-serialization" }
+sqldelight = { id = "app.cash.sqldelight" }
+kover = { id = "org.jetbrains.kotlinx.kover" }
+mockmp = { id = "org.kodein.mock.mockmp", version.ref = "mockmp" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint" }
+dokka = { id = "org.jetbrains.dokka" }
