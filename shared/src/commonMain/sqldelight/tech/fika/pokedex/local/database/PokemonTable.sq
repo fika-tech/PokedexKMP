@@ -1,0 +1,21 @@
+CREATE TABLE PokemonTable (
+    id INTEGER PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    type TEXT NOT NULL,
+    height INTEGER NOT NULL,
+    weight INTEGER NOT NULL,
+    imageUrl TEXT NOT NULL,
+    thumbnailUrl TEXT NOT NULL
+);
+
+insert:
+INSERT OR REPLACE INTO PokemonTable VALUES ?;
+
+get:
+SELECT * FROM PokemonTable WHERE id = ?;
+
+delete:
+DELETE FROM PokemonTable WHERE id = ?;
+
+getList:
+SELECT * FROM PokemonTable WHERE id > :offset ORDER BY id LIMIT :limit;
